@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(`http://localhost:3000/api/fib/${search}`);
-      let formatData = result.data + "";
+      let formatData = result.data + " ";
 
       setData(formatData);
     };
@@ -30,11 +30,11 @@ function App() {
         className="searchArea"
         type="number"
         min="0"
-        max="25"
+        max="92"
         value={query}
         onChange={event => {
-          if (event.target.value > 25) {
-            alert("Submit 25 or less");
+          if (event.target.value > 92) {
+            alert("Submit 92 or less");
           }
           if (event.target.value < 0) {
             alert("Must be a positive number");
